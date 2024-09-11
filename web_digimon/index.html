@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tp7: Multimedia</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/animate.css">
+    	<link rel="stylesheet" href="estilos.css">
+    	<link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    	<link rel="stylesheet" href="js/jquery.bxslider/jquery.bxslider.css">
+    	<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#IrArriba').hide();
+            $(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop() > 200){
+                    $('#IrArriba').fadeIn();
+                } else{
+                    $('#IrArriba').fadeOut();
+            }
+            })
+            $('#IrArriba span').click(function(){
+                $('body,html').animate({
+                scrollTop: 0
+            },1000);
+                return false;
+            })
+        })
+            
+        }) 
+    </script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    
+</head>
+<body>
+    <section class="parallax-window" data-parallax="scroll" data-image-src="img/wp1.png">
+       <img class="logo" src="img/ost_datl.png" alt="Digimon">
+		        <nav id="mobile"> <!-- Aqui estamos iniciando la nueva etiqueta nav -->
+		            <ul class="menu">
+		                <li><a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+		                    <ul>
+		                        <li><a href=#portfolio>Galeria</a></li>
+		                        <li><a href=#blog>Avances</a></li>
+		                        <li><a href=#contacto>Contacto</a></li>
+		                    </ul>
+		                </li>
+		            </ul>
+		        </nav><!-- Aqui estamos cerrando la nueva etiqueta nav -->
+		        <nav id="tablet"> <!-- Aqui estamos iniciando la nueva etiqueta nav -->
+		            <ul class="menu">
+		                   <li><a href=#portfolio>Galeria</a></li>
+		                   <li><a href=#blog>Avances</a></li>
+		                   <li><a href=#contacto>Contacto</a></li>
+		            </ul>
+		        </nav>
+		        
+		        <br>
+		        
+		        <div id=IrArriba>
+		        <a href="javascript:void(0);">
+		        <span>
+          
+      </span>
+      </a>
+       
+   </div>
+    </section>
+    
+           <aside>
+            <h3><a name="portfolio">Galeria</a></h3>
+        </aside>
+        <section  class="parallax-window2 imgResponsive" data-parallax="scroll" data-image-src="img/wp.jpg">
+            
+                <a class="fancybox" rel="Digimon" tittle="Tamers" href="img/img1Grande.jpg"><img class=" wow fadeInLeft" class="responsive"  src="img/img1.jpg" alt=""></a>
+                    <a class="fancybox" rel="Digimon" tittle="Tamers" href="img/img2Grande.jpg"><img class=" wow fadeInRight"  class="responsive" src="img/img2.jpg" alt=""></a>
+                    <a class="fancybox" rel="Digimon" tittle="Greymon" href="img/img3Grande.jpg"><img class=" wow fadeInLeft"  class="responsive" src="img/img3.jpg" alt=""></a>
+                    <a class="fancybox" rel="Digimon" tittle="Digimons" href="img/img4Grande.jpg"><img class=" wow fadeInRight"  class="responsive" src="img/img4.jpg" alt=""></a>
+                    <a class="fancybox" rel="Digimon" tittle="Digimons" href="img/img5Grande.jpg"><img class=" wow fadeInLeft"  class="responsive" src="img/img5.jpg" alt=""></a>
+                    <a class="fancybox" rel="Digimon" tittle="Tamers" href="img/img6Grande.jpg"><img class=" wow fadeInRight"  class="responsive" src="img/img7.jpg" alt=""></a>
+            
+            
+        </section>
+        <aside>
+           
+            <h3 class="wow zoomIn"><a name="blog">Avances</a></h3>
+            <article>
+                <h4>DIGIMON ADVENTURE 15th Anniversary Project</h4>
+                <!-- tag video src-->
+                <video controls>
+                   <source src="multimedia/digivideo.mp4" type="video/mp4">
+                    si no puede visualizar uds es un.....se entiende!!!
+                </video>
+            </article> <!-- video -->
+            <article>
+                <h4 class="wow flash" data-wow-iteration="20" >New Opening Song</h4>
+                <audio controls>
+                    <source src="multimedia/Digimon_Tri_Opening.mp3" type="audio/mp3">
+                </audio>
+            </article> <!-- audio -->
+            
+            <div class="slider">
+               <h1>Personajes</h1>
+                <ul class="bxslider">
+	            <li><img src="img/galeria/taichi.jpg" alt=""></li>
+	            <li><img src="img/galeria/yamato.jpg" alt=""></li>
+	            <li><img src="img/galeria/mimi.jpg" alt=""></li>
+	            <li><img src="img/galeria/izumi.jpg" alt=""></li>
+	            <li><img src="img/galeria/sora.jpg" alt=""></li>
+	            <li><img src="img/galeria/jo.jpg" alt=""></li>
+	            <li><img src="img/galeria/takeru.jpg" alt=""></li>
+	            <li><img src="img/galeria/hikari.jpg" alt=""></li>
+	        </ul>
+            </div>
+            
+        </aside>    
+        <section  class="parallax-window3" data-parallax="scroll" data-image-src="img/wp4.png">
+            <h3 class="wow zoomIn"><a name="contacto">Contacto</a></h3>
+            
+              <form>
+            <label>Tu Nombre:</label><input type='text' value=''>
+            <label>Tu Email:</label><input type='text' value=''>
+            <label>Asunto:</label><input type='text' value=''>
+            <label>Mensaje:</label><textarea rows='6'></textarea>
+            <input class="btn" type='submit' value='Envia Mensaje'>
+            <input class="btn" type='submit' value='Borrar'>
+        </form>  
+        </section>
+        <footer>
+            <p>Todos los derechos reservados Digimon Tri 2014-2017 @Copyright.</p>
+        </footer>
+        <!-- jquery -->
+        <script src="js/jquery.min.js"></script>
+        <!-- bxslider --> 
+        <script src="js/jquery.bxslider/jquery.bxslider.min.js"></script>
+        <!-- bxslider activador -->
+        <script>
+           $(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
+    </script>
+    <!-- fin activador -->
+    <!-- fancybox -->
+    <script src="js/fancybox/jquery.fancybox.pack.js"></script>
+    <!-- fancybox activador -->
+    <script type="text/javascript">
+	$(document).ready(function() {
+		$('.fancybox').fancybox({
+        padding : 0,
+        openEffect  : 'elastic'
+	});
+        });
+</script>
+        
+    <!-- parallax-->
+    <script src="js/parallax.js"></script>
+    <!-- parallax activador -->
+    <script>
+    $('.parallax-window').parallax({imageSrc: 'img/wp1.jpg'});
+        $('.parallax-window2').parallax({imageSrc: 'img/wp7.jpg'});
+    </script>
+    <!-- wow -->
+    <script src="js/wow.min.js"></script>
+    <!-- activador wow -->
+    <script>new WOW().init();</script>
+    
+    <!--Smooth-Scroll-->
+    <script src="js/smooth-scroll.js"></script>
+    <!--Smooth-Scroll activador -->
+</body>
+</body>
+</html>
